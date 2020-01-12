@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="584f81b2-31cb-4576-bc72-6d673ff767f2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datastructure/DataReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastructure/DataReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datastructure/UseArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/datastructure/UseArrayList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,7 +35,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DataReader">
+  <component name="RunManager" selected="Application.UseArrayList">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -83,6 +81,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UseArrayList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="datastructure.UseArrayList" />
+      <module name="CodingExamJuly2019" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="datastructure.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -109,9 +121,11 @@
       <item itemvalue="Application.CsvReader" />
       <item itemvalue="Application.ConnectToMongoDB" />
       <item itemvalue="Application.DataReader" />
+      <item itemvalue="Application.UseArrayList" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UseArrayList" />
         <item itemvalue="Application.DataReader" />
         <item itemvalue="Application.ConnectToMongoDB" />
         <item itemvalue="Application.CsvReader" />
@@ -148,26 +162,30 @@
       <screen x="0" y="0" width="1739" height="939" />
     </state>
     <state x="462" y="129" key="#Project_Structure/0.0.1739.939@0.0.1739.939" timestamp="1578850354661" />
-    <state width="1696" height="248" key="GridCell.Tab.0.bottom" timestamp="1578852642095">
+    <state width="1696" height="248" key="GridCell.Tab.0.bottom" timestamp="1578859610672">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state width="1696" height="248" key="GridCell.Tab.0.bottom/0.0.1739.939@0.0.1739.939" timestamp="1578852642095" />
-    <state width="1696" height="248" key="GridCell.Tab.0.center" timestamp="1578852642095">
+    <state width="1696" height="248" key="GridCell.Tab.0.bottom/0.0.1739.939@0.0.1739.939" timestamp="1578859610672" />
+    <state width="1696" height="248" key="GridCell.Tab.0.center" timestamp="1578859610671">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state width="1696" height="248" key="GridCell.Tab.0.center/0.0.1739.939@0.0.1739.939" timestamp="1578852642095" />
-    <state width="1696" height="248" key="GridCell.Tab.0.left" timestamp="1578852642095">
+    <state width="1696" height="248" key="GridCell.Tab.0.center/0.0.1739.939@0.0.1739.939" timestamp="1578859610671" />
+    <state width="1696" height="248" key="GridCell.Tab.0.left" timestamp="1578859610671">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state width="1696" height="248" key="GridCell.Tab.0.left/0.0.1739.939@0.0.1739.939" timestamp="1578852642095" />
-    <state width="1696" height="248" key="GridCell.Tab.0.right" timestamp="1578852642095">
+    <state width="1696" height="248" key="GridCell.Tab.0.left/0.0.1739.939@0.0.1739.939" timestamp="1578859610671" />
+    <state width="1696" height="248" key="GridCell.Tab.0.right" timestamp="1578859610671">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
-    <state width="1696" height="248" key="GridCell.Tab.0.right/0.0.1739.939@0.0.1739.939" timestamp="1578852642095" />
+    <state width="1696" height="248" key="GridCell.Tab.0.right/0.0.1739.939@0.0.1739.939" timestamp="1578859610671" />
     <state x="1030" y="589" key="com.intellij.ide.util.TipDialog" timestamp="1578850232872">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
     <state x="1030" y="589" key="com.intellij.ide.util.TipDialog/0.0.1739.939@0.0.1739.939" timestamp="1578850232872" />
+    <state x="527" y="216" key="run.anything.popup" timestamp="1578856207641">
+      <screen x="0" y="0" width="1739" height="939" />
+    </state>
+    <state x="527" y="216" key="run.anything.popup/0.0.1739.939@0.0.1739.939" timestamp="1578856207641" />
     <state x="532" y="200" width="672" height="678" key="search.everywhere.popup" timestamp="1578850489050">
       <screen x="0" y="0" width="1739" height="939" />
     </state>
