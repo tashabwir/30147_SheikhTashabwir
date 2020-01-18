@@ -22,7 +22,7 @@ public class Numbers {
 
 	public static void main(String[] args) throws Exception {
 		
-		int [] num = new int[1000000];
+		int [] num = new int[100];
 		storeRandomNumbers(num);
 		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
 		//Selection Sort
@@ -35,6 +35,7 @@ public class Numbers {
         printValue(numbers);
 		int n = num.length;
 		randomize (num, n);
+
 		//Insertion Sort
 		algo.insertionSort(num);
 		long insertionSortExecutionTime = algo.executionTime;
@@ -42,10 +43,19 @@ public class Numbers {
 
 		//By following above, Continue for rest of the Sorting Algorithm....
 
+		//Bubble
+		randomize (num, n);
 
+		algo.bubbleSort(num);
+		long bubbleSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Bubble Sort take: " + bubbleSortExecutionTime + " milli sec");
 
+		//quick
+		randomize (num, n);
 
-
+		algo.quickSort(num, 0, n-1);
+		long quickSortExecutionTime = algo.executionTime;
+		System.out.println("Total Execution Time of " + num.length + " numbers in Quick Sort take: " + quickSortExecutionTime + " milli sec");
 
 
 
@@ -61,8 +71,7 @@ public class Numbers {
 		}
 	}
 
-	public static void randomize( int arr[], int n)
-	{
+	public static void randomize( int arr[], int n){
 		Random r = new Random();
 		// Start from the last element and swap one by one. We don't
 		// need to run for the first element that's why i > 0
@@ -73,6 +82,7 @@ public class Numbers {
 			arr[j] = temp;
 		}
 	}
+
 	public static void printValue(List<String> array){
 		for(String st:array){
 			System.out.println(st);

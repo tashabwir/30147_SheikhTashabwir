@@ -1,5 +1,8 @@
 package string.problems;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * Created by mrahman on 04/22/17.
  */
@@ -13,6 +16,20 @@ public class DuplicateWord {
 
         String st = "Java is a programming Language. Java is also an Island of Indonesia. Java is widely used language";
 
+        String[] space = st.split(" ");
+
+        Map<String,Integer> Map = new HashMap<>();
+
+        for ( String word : space ) {
+            Integer count = Map.get(word);
+            if (count == null) {
+                count = 0;
+            }
+            Map.put(word, count + 1);
+        }
+        for(Map.Entry<String, Integer> stringEntry : Map.entrySet()){
+            System.out.println("word: " + stringEntry.getKey() + " --> appearances: " + stringEntry.getValue() );
+        }
     }
 
 }

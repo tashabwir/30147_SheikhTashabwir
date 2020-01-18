@@ -32,20 +32,16 @@ public class DataReader {
         try {
             fr = new FileReader(textFile);
 
+                br = new BufferedReader(fr);
+                while ((line = br.readLine()) != null) {
+                    System.out.println(line);
+                    store += line;
+                }
         } catch (Exception e) {
             System.out.println("Cannot read file ");
         }
 
-        try {
-            br = new BufferedReader(fr);
-            while ((line = br.readLine()) != null) {
-                System.out.println(line);
-                store += line;
 
-            }
-        } catch (Exception e) {
-            System.out.println("Cannot read file ");
-        }
 
         String[] storeArray = store.split(" ");
 

@@ -14,7 +14,9 @@ public class FortuneEmployee {
 	 *
 	 **/
 	public static void main(String[] args) {
-		
+
+		EmployeeInfo first = new EmployeeInfo("adam",111,"QA",50000.00,'M');
+		EmployeeInfo second = new EmployeeInfo("Tasha",222,"Dev",80000.00,'F');
 
 
 	}

@@ -21,7 +21,12 @@ public class EmployeeInfo {
 	 * declare few static and final fields and some non-static fields
 	 */
 	static String companyName;
-	
+
+	private String name;
+	private int employeeId;
+	private String deptName;
+	private static double salary;
+
 	/*
 	 * You must implement the logic for below 2 methods and 
 	 * following 2 methods are prototype as well for other methods need to be design,
@@ -33,12 +38,60 @@ public class EmployeeInfo {
 	 * Must implement below constructor.
 	 */
 	public EmployeeInfo(int employeeId){
-		
+		this.employeeId=employeeId;
 	}
     public EmployeeInfo(String name, int employeeId){
-		
+		this.name=name;
+		this.employeeId=employeeId;
 	}
-	
+	public EmployeeInfo(String name, int employeeId, String deptName, double salary) {
+		this.name = name;
+		this.employeeId = employeeId;
+		this.deptName = deptName;
+		this.salary=salary;
+	}
+
+
+	public static String getCompanyName() {
+		return companyName;
+	}
+
+	public static void setCompanyName(String companyName) {
+		EmployeeInfo.companyName = companyName;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getEmployeeId() {
+		return employeeId;
+	}
+
+	public void setEmployeeId(int employeeId) {
+		this.employeeId = employeeId;
+	}
+
+	public String getDeptName() {
+		return deptName;
+	}
+
+	public void setDeptName(String deptName) {
+		this.deptName = deptName;
+	}
+
+	public static double getSalary() {
+		return salary;
+	}
+
+	public static void setSalary(double salary) {
+		EmployeeInfo.salary = salary;
+	}
+
 	/*
 	 * This methods should calculate Employee bonus based on salary and performance.
 	 * Then it will return the total yearly bonus. So you need to implement the logic.
@@ -49,6 +102,7 @@ public class EmployeeInfo {
 	 */
 	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
 		int total=0;
+
 		return total;
 	}
 	
@@ -70,8 +124,6 @@ public class EmployeeInfo {
 
         //implement numbers of year from above two dates
 		//Calculate pension
-
-
 
 		return total;
 	}
