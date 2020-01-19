@@ -2,7 +2,7 @@ package design;
 
 import java.util.Scanner;
 
-public class EmployeeInfo {
+public class EmployeeInfo extends AbstratClass{
 	
  /*This class can be implemented from Employee interface then add additional methods in EmployeeInfo class.
  * Also, Employee interface can be implemented into an abstract class.So create an Abstract class
@@ -84,11 +84,11 @@ public class EmployeeInfo {
 		this.deptName = deptName;
 	}
 
-	public static double getSalary() {
+	public double getSalary() {
 		return salary;
 	}
 
-	public static void setSalary(double salary) {
+	public void setSalary(double salary) {
 		EmployeeInfo.salary = salary;
 	}
 
@@ -100,9 +100,20 @@ public class EmployeeInfo {
 	 * So you probably need to send 2 arguments.
 	 * 
 	 */
-	public static int calculateEmployeeBonus(int numberOfYearsWithCompany){
-		int total=0;
-
+	public static double calculateEmployeeBonus(int numberOfYearsWithCompany, int salary){
+		double total=0;
+		if (numberOfYearsWithCompany >= 5) {
+			total = salary* 0.1;
+		} else if (numberOfYearsWithCompany >= 4) {
+			total = salary * 0.08;
+		} else if (numberOfYearsWithCompany >= 3) {
+			total = salary * 0.06;
+		} else if (numberOfYearsWithCompany >= 2) {
+			total = salary * 0.04;
+		} else {
+			total = 0;
+			System.out.println("Sorry, no bonus earned.");
+		}
 		return total;
 	}
 	
@@ -112,7 +123,7 @@ public class EmployeeInfo {
 	 * Hints: pension will be 5% of the salary for 1 year, 10% for 2 years with the company and so on.
 	 * 
 	 */
-	public static int calculateEmployeePension(){
+	public int calculateEmployeePension(){
 		int total=0;
 		Scanner sc  = new Scanner(System.in);
 		System.out.println("Please enter start date in format (example: May,2015): ");
@@ -125,8 +136,57 @@ public class EmployeeInfo {
         //implement numbers of year from above two dates
 		//Calculate pension
 
+		String startYear = convertedJoiningDate.substring(convertedJoiningDate.length() - 4, convertedJoiningDate.length());
+		String currentYear = convertedTodaysDate.substring(convertedTodaysDate.length() - 4, convertedTodaysDate.length());
+		int start = Integer.parseInt(startYear);
+		int current = Integer.parseInt(currentYear);
+
+		int numberOfYears = current - start;
+
+		if (numberOfYears >= 5) {
+			total = (int) (salary * .25);
+		} else if (numberOfYears == 4) {
+			total = (int) (salary * .20);
+		} else if (numberOfYears == 3) {
+			total = (int) (salary * .15);
+		} else if (numberOfYears == 2) {
+			total = (int) (salary * .10);
+		} else if (numberOfYears == 1) {
+			total = (int) (salary * .05);
+		} else {
+			total = 0;
+		}
+		System.out.println("pension is: " + total);
+
 		return total;
+
 	}
+
+	@Override
+	public int employeeId() {
+		return 0;
+	}
+
+	@Override
+	public String employeeName() {
+		return null;
+	}
+
+	@Override
+	public void assignDepartment() {
+
+	}
+
+	@Override
+	public int calculateSalary() {
+		return 0;
+	}
+
+	@Override
+	public void benefitLayout() {
+
+	}
+
 	private static class DateConversion {
 
 		public DateConversion(Months months){}

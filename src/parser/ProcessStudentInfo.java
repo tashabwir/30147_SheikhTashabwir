@@ -59,21 +59,27 @@ public class ProcessStudentInfo {
 				seleniumStudents = xmlReader.parseData(tag, pathSelenium);
 
 				//Parse Data using parseData method and then store data into Qtp ArrayList.
-				
+				qtpStudents = xmlReader.parseData(tag, pathQtp);
+
 				//add Selenium ArrayList data into map.
+				list.put("SeleStudents", seleniumStudents);
 
 				//add Qtp ArrayList data into map.
-		
+				list.put("qtpStudents", qtpStudents);
 		      	
 				//Retrieve map data and display output.
+				for (Map.Entry e : list.entrySet())
 
+					System.out.println(e.getKey()+" "+e.getValue());
 
 
 				//Store Qtp data into Qtp table in Database
 				connectToMongoDB.insertIntoMongoDB(seleniumStudents,"qtp");
 				//connectToSqlDB.insertDataFromArrayListToMySql(seleniumStudents, "qtp","studentList");
+				ConnectToMongoDB.insertIntoMongoDB(qtpStudents, "qtp");
 
 				//Store Selenium data into Selenium table in Database
+				ConnectToMongoDB.insertIntoMongoDB(seleniumStudents,"selelnium");
 
 				//Retrieve Qtp students from Database
                List<Student> stList = connectToMongoDB.readStudentListFromMongoDB("qtp");
@@ -82,7 +88,10 @@ public class ProcessStudentInfo {
 			   }
 
 			   //Retrieve Selenium students from Database
-
+				List<Student> sel = ConnectToMongoDB.readStudentListFromMongoDB("selenium");
+				for (Student std : sel) {
+					System.out.println(std.getFirstName() + " " + std.getLastName() + " " + std.getScore() + " " + std.getId());
+				}
 
 			}
 

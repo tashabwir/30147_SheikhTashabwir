@@ -1,5 +1,11 @@
 package design;
 
+import databases.ConnectToSqlDB;
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.*;
+
 public class FortuneEmployee {
 
 	/**
@@ -15,8 +21,23 @@ public class FortuneEmployee {
 	 **/
 	public static void main(String[] args) {
 
-		EmployeeInfo first = new EmployeeInfo("adam",111,"QA",50000.00,'M');
-		EmployeeInfo second = new EmployeeInfo("Tasha",222,"Dev",80000.00,'F');
+		EmployeeInfo E1 = new EmployeeInfo("Adam", 111, "QA", 100000);
+		EmployeeInfo E2 = new EmployeeInfo("Tasha",222,"Dev",80000.00);
+
+		System.out.println(E1.getName() );
+		System.out.println(E1.getEmployeeId());
+		System.out.println(E1.getSalary());
+		System.out.println();
+
+		E2.setSalary(120000);
+		System.out.println( E2.getName() );
+		System.out.println(E2.getEmployeeId());
+		System.out.println(E2.getSalary());
+
+		System.out.println(EmployeeInfo.calculateEmployeeBonus(3, (int) E2.getSalary()));
+
+		E1.calculateEmployeePension();
+
 
 
 	}

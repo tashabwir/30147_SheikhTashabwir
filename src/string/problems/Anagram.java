@@ -30,8 +30,8 @@ public class Anagram {
 
         if (word1.length() == word2.length()) {
 
-            word1 = word1.toUpperCase();
-            word2 = word2.toUpperCase();
+            word1 = word1.toLowerCase();
+            word2 = word2.toLowerCase();
 
             char[] str1c = word1.toCharArray();
             Arrays.sort(str1c);
